@@ -1,21 +1,22 @@
+#Kirjutab ridadega teksti
 def writeFileLine(name, tekst, korrad):
     f = open(name+".txt", "w")
     for i in range(0,korrad):
         f.write(tekst + "\n")
     f.close()
-
+#Kirjutab ridadeta teksti
 def writeFile(name, tekst, korrad):
     f = open(name+".txt", "w")
     for i in range(0,korrad):
         f.write(tekst)
     f.close()
-
+#Vaatab kas kasutaja tahab ridu või mitte
 def lineChecker(a, name, tekst, korrad):
     if a == 0:
         writeFileLine(name, tekst, korrad)
     if a == 1:
         writeFile(name, tekst, korrad)
-
+#Küsib kasutaja inputi
 def askInput():
     try:
         fileName = input("Faili nimi: ")
@@ -26,7 +27,7 @@ def askInput():
         if len(userIn) <= 0:
             print("Sisesta tekst!")
             askInput()
-        times = int(input("Mitu korda? "))
+        times = int(input("Mitu korda? ")) #Mitu korda peaks kordama seda teksti
         if times <= 0:
             print("Sisesta number üle nulli!")
             askInput()
